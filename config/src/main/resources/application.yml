@@ -7,6 +7,6 @@ spring:
       server:
         git:
           uri: https://github.com/852467598/webstile
-          search-paths: https://github.com/852467598/webstile/tree/master/config/src/main/resources/shared
-      username: user
-      password: 123456
+          search-paths: shared
+          username: 852467598@qq.com
+          password: 152qq6134

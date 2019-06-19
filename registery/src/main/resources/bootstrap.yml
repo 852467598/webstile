@@ -6,12 +6,12 @@ spring:
     config:
       uri: http://localhost:8888
       fail-fast: false
-      username: user
-      password: 123456
+
 eureka:
   instance:
     prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: false
-
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
