@@ -1,4 +1,2 @@
 server:
   port: 8086
-management:
-  port: 8087
