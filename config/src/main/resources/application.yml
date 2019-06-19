@@ -6,4 +6,5 @@ spring:
     config:
       server:
         git:
-          uri: 
+          uri: https://github.com/852467598/webstile
+          search-paths: 
