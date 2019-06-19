@@ -6,3 +6,5 @@ spring:
     config:
       uri: http://localhost:8888
       fail-fast: false
+server:
+  port: 8087

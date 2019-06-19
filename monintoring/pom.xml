@@ -30,12 +30,7 @@
             <artifactId>spring-cloud-starter-netflix-turbine-stream</artifactId>
             <version>RELEASE</version>
         </dependency>
-        <!--队列-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
-            <version>RELEASE</version>
-        </dependency>
+
         <!--熔断器可视化界面-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
