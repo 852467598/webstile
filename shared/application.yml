@@ -27,3 +27,14 @@ rabbitmq:
   port: 15672
   username: guest
   password: guest
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hbm2ddl:
+          auto=update: update
+        show_sql: true
+        format_sql: false
+        enable_lazy_load_no_trans: true

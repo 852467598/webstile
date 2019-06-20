@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>观山湖区生态损益管理大数据平台</title>
+
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body class="bg">
+<div class="login">
+    <div class="title">观山湖区生态损益管理大数据平台</div>
+    <div class="subtitle">
+        <p>自然生态-区域可持续发展的核心基础</p>
+        <p>描绘出青山绿水和金山银山之间的故事</p>
+    </div>
+    <div id="errorinfo" th:if="${param.error}">
+        <span>用户名、密码错误或未配置角色</span>
+    </div>
+    <div class="login_form">
+        <form th:action="@{/login}" method="post">
+            <div class="login_box">
+                <div class="login_boxs">
+                    <div class="form-content"><img th:src="@{/img/login/zx.png}"><input type="text" id="username"
+                                                                                        name="username"
+                                                                                        class="form-control"
+                                                                                        placeholder="用户名"
+                                                                                        autocomplete="off"></div>
+                    <div class="form-content"><img th:src="@{/img/login/mm.png}"><input type="password" id="password"
+                                                                                        name="password"
+                                                                                        class="form-control"
+                                                                                        placeholder="密码"
+                                                                                        autocomplete="off"></div>
+                </div>
+                <div class="lockmima">
+                    <!--<img th:src="@{/img/login/jz1.png}">记住密码-->
+                </div>
+                <button type="submit" class="login_btn" style="border:0;">
+                    登录
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/js/jquery-1.11.1.min.js}"></script>
+<script th:src="@{/script/timeOut.js}"></script>
+<script type="text/javascript">
+    function browser() {
+        var u = navigator.userAgent.toLowerCase();
+        var app = navigator.appVersion.toLowerCase();
+        return {
+            txt: u, // 浏览器版本信息
+            version: (u.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1], // 版本号
+            msie: /msie/.test(u) && !/opera/.test(u), // IE内核
+            mozilla: /mozilla/.test(u) && !/(compatible|webkit)/.test(u), // 火狐浏览器
+            safari: /safari/.test(u) && !/chrome/.test(u), //是否为safair
+            chrome: /chrome/.test(u), //是否为chrome
+            opera: /opera/.test(u), //是否为oprea
+            presto: u.indexOf('presto/') > -1, //opera内核
+            webKit: u.indexOf('applewebkit/') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('gecko/') > -1 && u.indexOf('khtml') == -1, //火狐内核
+            mobile: !!u.match(/applewebkit.*mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( u;)? cpu.+mac os x/), //ios终端
+            android: u.indexOf('android') > -1, //android终端
+            iPhone: u.indexOf('iphone') > -1, //是否为iPhone
+            iPad: u.indexOf('ipad') > -1, //是否iPad
+            webApp: !!u.match(/applewebkit.*mobile.*/) && u.indexOf('safari/') == -1 //是否web应该程序，没有头部与底部
+        };
+    }
+
+    jQuery(document).ready(function () {
+        var b = browser();
+        if (b.mobile) {
+            //是移动终端
+            $(".title").css("font-size", "22px");
+            $(".subtitle").css("font-size", "16px");
+        } else {
+            $(".title").css("font-size", "48px");
+            $(".subtitle").css("font-size", "22px");
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+#datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.8:3306/detao?useSSL=false
+    username: root
+    password: server
